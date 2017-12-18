@@ -1,0 +1,12 @@
+{application, main, 
+  [{description, "Chat server"},
+   {vsn, "0.1.0"},
+   {modules, [main, server_manager, server_manager_sup, 
+              tcp_server, tcp_server_sup, message_handler]},
+   {registered, [server_mgr]},
+   {applications, [kernel, stdlib]},
+   {mod, {main, []}},
+   {env, [{name, "Chat server"}, 
+          {port, 10000}]}
+  ]
+}.
